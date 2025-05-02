@@ -87,6 +87,8 @@ Tutorials showcasing various capabilities of Libra
       *6.2.16.1 [benzene example](6_dynamics/2_nbra_workflows/16_ml_hamiltonian_mapping/1_benzene)
     * 6.2.17. [Active state selection](6_dynamics/2_nbra_workflows/17_active_space_selection)
     * 6.2.18. [Time-resolved spectra calculations and plotting](6_dynamics/2_nbra_workflows/18_plotting_trpes)
+    * 6.2.19. [Running patch dynamics in the RPI approach](6_dynamics/2_nbra_workflows/19_step4_patch_rpi)
+    * 6.2.20. [Summing patch dynamics in the RPI approach](6_dynamics/2_nbra_workflows/20_step5_sum_rpi)
 
  * 6.3. [Hierarchical equations of motion, HEOM](6_dynamics/3_heom)
     * 6.3.1. [Computing population dynamics and lineshapes](6_dynamics/3_heom/1_dynamics_and_lineshapes)
@@ -570,7 +572,11 @@ _______________________________
 94. Compute time-resolved spectra
   * [6.2.18.](6_dynamics/2_nbra_workflows/18_plotting_trpes/tutorial.ipynb)
 
+95. Run patch dynamics in the RPI approach 
+  * [6.2.19.](6_dynamics/2_nbra_workflows/19_step4_patch_rpi/tutorial.ipynb)
 
+96. Compute the patch summation in the RPI approach
+  * [6.2.20.](6_dynamics/2_nbra_workflows/20_step5_sum_rpi/tutorial.ipynb)
 ___________________________________________________________
 
 
@@ -735,6 +741,7 @@ ___________________________________________________________
             [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb) |
             [6.1.12.](6_dynamics/1_trajectory_based/12_model_spin_boson_fmo/tutorial.ipynb) |
             [6.1.5.](6_dynamics/1_trajectory_based/5_atomistic_adiabatic_excited_states/tutorial.ipynb) |
+            [6.2.19.](6_dynamics/2_nbra_workflows/19_step4_patch_rpi/tutorial.ipynb) |
       - `recipes`
         - `adiabatic_md_interfaces_params` [6.1.5.](6_dynamics/1_trajectory_based/5_atomistic_adiabatic_excited_states/tutorial.ipynb)
 
