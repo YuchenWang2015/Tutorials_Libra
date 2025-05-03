@@ -3,6 +3,7 @@ import numpy as np
 import scipy.sparse as sp
 import h5py
 import warnings
+import argparse
 
 from liblibra_core import *
 import util.libutil as comn
@@ -12,30 +13,27 @@ import libra_py.dynamics.tsh.compute as tsh_dynamics
 path = os.getcwd()
 params = {}
 
-# Leave this part for Libra
-params['path_to_save_Hvibs'] =
-params['istep'] =
-params['fstep'] =
-params['nsteps'] =
-params['npatches'] =
-params['istate'] =
-params['dt'] =
+parser = argparse.ArgumentParser()
+parser.add_argument('--path_to_save_Hvibs', type=str)
+parser.add_argument('--basis_type', type=str)
+parser.add_argument('--istep', type=int)
+parser.add_argument('--fstep', type=int)
+parser.add_argument('--istate', type=int)
+parser.add_argument('--dt', type=float)
+args = parser.parse_args()
 
 # Read the vibronic Hamiltonian
-
-path_to_save_Hvibs = params['path_to_save_Hvibs']
-
-#istep = rpi_params['iread'] + rpi_params['icond'] + rpi_params['ipatch']*int(rpi_params['nsteps']/rpi_params['npatches'])
-#fstep = istep + int(rpi_params['nsteps']/rpi_params['npatches']) + 1
-istep = params["istep"]
-fstep = params["fstep"]
+path_to_save_Hvibs = args.path_to_save_Hvibs
+basis_type = args.basis_type
+istep = args.istep
+fstep = args.fstep
 
 NSTEPS = fstep - istep
 
 #================== Read energies =====================
 E = []
 for step in range(istep, fstep):
-    energy_filename = F"{path_to_save_Hvibs}/Hvib_ci_{step}_re.npz"
+    energy_filename = F"{path_to_save_Hvibs}/Hvib_{basis_type}_{step}_re.npz"
     energy_mat = sp.load_npz(energy_filename)
     # For data conversion we need to turn np.ndarray to np.array so that 
     # we can use data_conv.nparray2CMATRIX
@@ -46,7 +44,7 @@ NSTATES = E[0].shape[0]
 #================== Read time-overlap =====================
 St = []
 for step in range(istep, fstep):        
-    St_filename = F"{path_to_save_Hvibs}/St_ci_{step}_re.npz"
+    St_filename = F"{path_to_save_Hvibs}/St_{basis_type}_{step}_re.npz"
     St_mat = sp.load_npz(St_filename)
     St.append( np.array( St_mat.todense() ) )
 St = np.array(St)
@@ -55,7 +53,7 @@ St = np.array(St)
 NAC = []
 Hvib = [] 
 for c, step in enumerate(range(istep, fstep)):
-    nac_filename = F"{path_to_save_Hvibs}/Hvib_ci_{step}_im.npz"
+    nac_filename = F"{path_to_save_Hvibs}/Hvib_{basis_type}_{step}_im.npz"
     nac_mat = sp.load_npz(nac_filename)
     NAC.append( np.array( nac_mat.todense() ) )
     Hvib.append( np.diag(E[c, :])*(1.0+1j*0.0)  - (0.0+1j)*nac_mat[:, :] )
@@ -87,7 +85,7 @@ model_params = { "timestep":0, "icond":0,  "model0":0, "nstates":NSTATES }
 
 #=============== Some automatic variables, related to the settings above ===================
 
-dyn_general = { "nsteps":NSTEPS, "ntraj":1, "nstates":NSTATES, "dt":params["dt"], "nfiles": NSTEPS,
+dyn_general = { "nsteps":NSTEPS, "ntraj":1, "nstates":NSTATES, "dt":args.dt, "nfiles": NSTEPS,
                 "progress_frequency":1, "which_adi_states":range(NSTATES), "which_dia_states":range(NSTATES),
                 "mem_output_level":2,
                 "properties_to_save":["timestep", "time", "se_pop_adi"],
@@ -119,7 +117,7 @@ nucl_params = {"ndof":1, "init_type":3, "q":[-10.0], "p":[0.0], "mass":[2000.0],
 # Amplitudes are sampled
 elec_params = {"ndia":NSTATES, "nadi":NSTATES, "verbosity":-1, "init_dm_type":0}
 
-elec_params.update( {"init_type":1,  "rep":1,  "istate":params["istate"] } )  # how to initialize: random phase, adiabatic representation, given initial state
+elec_params.update( {"init_type":1,  "rep":1,  "istate":args.istate } )  # how to initialize: random phase, adiabatic representation, given initial state
 
 rnd = Random()
 
