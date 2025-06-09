@@ -100,6 +100,7 @@ Tutorials showcasing various capabilities of Libra
     * 6.4.3. [SOFT dynamics in 1D and 2D](6_dynamics/4_wavepackets/3_soft_propagation)
     * 6.4.4. [More examples of DVR and dynamics](6_dynamics/4_wavepackets/4_more)
     * 6.4.5. [Grids and hyperplanes](6_dynamics/4_wavepacket/5_grids_and_hyperplanes)
+    * 6.5.6. [SOFT dynamics in 1D and 2D with PyTorch](6_dynamics/4_wavepackets/6_soft_with_pytorch)
 
  * 6.5. [Quantum Trajectories with Adaptive Gaussians, QTAG](6_dynamics/5_qtag)
     * 6.5.1. [Basics](6_dynamics/5_qtag/1_basics)
@@ -361,6 +362,7 @@ _______________________________
 
 41. Plot the PES profiles with multidimensional model Hamiltonians
   * [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb)
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
 
 42. MD and NAMD in the NVT ensemble
   * [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb)
@@ -382,7 +384,8 @@ _______________________________
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial3.ipynb)
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial4.ipynb)
   * [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
-  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf)
+  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
 
 47. DVR calculations
   * [6.4.2.](6_dynamics/4_wavepackets/2_dvr_basics/tutorial.ipynb)
@@ -392,11 +395,12 @@ _______________________________
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial3.ipynb)
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial4.ipynb)
   * [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
-  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf)
+  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
 
 48. Making animated gifs
   * [6.4.3.](6_dynamics/4_wavepackets/3_soft_propagation/tutorial.ipynb)
-  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf)
+  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
 
 49. Integrating quantum Liouville's equation of motion
   * [2.2.](2_integrators/2_runge_kutta_4_for_Liouville/tutorial.ipynb)
@@ -577,6 +581,16 @@ _______________________________
 
 96. Compute the patch summation in the RPI approach
   * [6.2.20.](6_dynamics/2_nbra_workflows/20_step5_sum_rpi/tutorial.ipynb)
+
+97. Save and load the PyTorch tensors to/from file
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+
+98. Potential energy surfaces with PyTorch
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+
+99. Numerically exact solution of the TD-SE using PyTorch
+  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+
 ___________________________________________________________
 
 
@@ -685,6 +699,11 @@ ___________________________________________________________
       - `save`
         - `init_tsh_savers` [6.4.3.](6_dynamics/4_wavepackets/3_soft_propagation/tutorial.ipynb) | 
            [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
+    - `exact_torch`
+      - `compute`
+        - `Martens_model` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+        - `gaussian_wavepacket` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+        - `exact_tdse_solver` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
     - `heom`
       - `compute` 
         - `run_dynamics` [6.3.1.](6_dynamics/3_heom/1_dynamics_and_lineshapes/tutorial.ipynb)
