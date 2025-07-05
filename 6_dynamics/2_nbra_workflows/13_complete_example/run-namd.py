@@ -31,7 +31,7 @@ colors.update({"41": "#2F4F4F"})  # darkslategray
 clrs_index = ["11", "21", "31", "41", "12", "22", "32", "13","23", "14", "24"]
 
 istep = 0    # the first timestep to read
-fstep =22   # the last timestep to read
+fstep = 40   # the last timestep to read
 dt = 0.5*41.0   # integration time-step [a.u. of time]
 
 nsteps = fstep - istep
@@ -96,11 +96,9 @@ def compute_model(q, params, full_id):
 model_params = { "timestep":0, "icond":0,  "model0":0, "nstates":NSTATES }
 
 
-
-
 #=============== Some automatic variables, related to the settings above ===================
 
-dyn_general = { "nsteps":NSTEPS, "ntraj":2500, "nstates":NSTATES, "dt":dt,                                                 
+dyn_general = { "nsteps":NSTEPS, "ntraj":250, "nstates":NSTATES, "dt":dt,                                                 
                 "decoherence_rates":MATRIX(NSTATES,NSTATES), "ave_gaps":MATRIX(NSTATES,NSTATES),                
                 "progress_frequency":0.1, "which_adi_states":range(NSTATES), "which_dia_states":range(NSTATES),
                 "mem_output_level":2,
@@ -116,7 +114,7 @@ dyn_general.update({"time_overlap_method":0})  # don't attempt to compute those,
 dyn_general.update({"nac_update_method":0})    # don't attempt to recompute NACs, so that we don't override the read values
 dyn_general.update({"hvib_update_method":0})   # don't attempt to recompute Hvib, so that we don't override the read values
 dyn_general.update( {"force_method":0, "rep_force":1} ) # NBRA = don't compute forces, so rep_force actually doesn't matter
-dyn_general.update({"hop_acceptance_algo":32, "momenta_rescaling_algo":0 })  # accept based on Boltzmann, no velocity rescaling
+dyn_general.update({"hop_acceptance_algo":31, "momenta_rescaling_algo":0 })  # accept based on Boltzmann, no velocity rescaling
 dyn_general.update( {"rep_tdse":1}) # the TDSE integration is conducted in adiabatic rep
 dyn_general.update( {"electronic_integrator":2} )  # using the local diabatization approach to integrate TD-SE
 
@@ -143,7 +141,7 @@ nucl_params = {"ndof":1, "init_type":3, "q":[-10.0], "p":[0.0], "mass":[2000.0],
 
 # Amplitudes are sampled
 elec_params = {"ndia":NSTATES, "nadi":NSTATES, "verbosity":-1, "init_dm_type":0}
-elec_params.update( {"init_type":1,  "rep":1,  "istate":3 } )  # how to initialize: random phase, adiabatic representation
+elec_params.update( {"init_type":1,  "rep":1,  "istate":3, "istates":[0.0, 0.0, 0.0, 1.0] } )  # how to initialize: random phase, adiabatic representation
 
 
 rnd = Random()

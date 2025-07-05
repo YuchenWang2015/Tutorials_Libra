@@ -45,7 +45,7 @@ Hamiltonian = DFTB {
 #  }
 
   SlaterKosterFiles = Type2FileNames {
-    Prefix = "/mnt/d/WORK/BUFFALO/RESEARCH/Mohammad_Shakiba/Project_Oxotitanates/Step1-dftb/matsci-0-3/"
+    Prefix = "matsci-0-3/"
     Separator = "-"
     Suffix = ".skf"
   }

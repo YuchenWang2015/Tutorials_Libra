@@ -13,4 +13,17 @@ eigenvec*
 hamsqr1*
 oversqr*
 *-md.xyz
+*-md-aligned.xyz
+geo_end.xyz
+md.out
+o
+odin*
+p_matrix.txt
 *.gen
+.ipynb_checkpoints
+matsci-0-3/
+skfiles/
+skfiles2/
+skfiles3/
+test.ipynb
+

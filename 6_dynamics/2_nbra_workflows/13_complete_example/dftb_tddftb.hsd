@@ -21,7 +21,7 @@ Hamiltonian = DFTB {
 #  }
 
   SlaterKosterFiles = Type2FileNames {
-    Prefix = "/mnt/d/WORK/BUFFALO/RESEARCH/Mohammad_Shakiba/Project_Oxotitanates/Step1-dftb/matsci-0-3/"
+    Prefix = "skfiles/"
     Separator = "-"
     Suffix = ".skf"
   }
@@ -35,7 +35,7 @@ Hamiltonian = DFTB {
 
 ExcitedState{
     Casida{
-        NrOfExcitations = 10
+        NrOfExcitations = 15
         StateOfInterest    = 0
         Symmetry           = singlet
 #        Diagonaliser = Arpack{}

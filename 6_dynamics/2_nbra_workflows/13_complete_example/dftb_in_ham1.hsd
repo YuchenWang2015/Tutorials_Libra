@@ -21,7 +21,7 @@ Hamiltonian = DFTB {
 #  }
 
   SlaterKosterFiles = Type2FileNames {
-    Prefix = "/mnt/d/WORK/BUFFALO/RESEARCH/Mohammad_Shakiba/Project_Oxotitanates/Step1-dftb/matsci-0-3/"
+    Prefix = "skfiles/"
     Separator = "-"
     Suffix = ".skf"
   }
@@ -36,15 +36,15 @@ Hamiltonian = DFTB {
 
 
 Options = {
-  WriteAutotestTag = Yes
+#  WriteAutotestTag = Yes
 #  WriteHS = Yes
-  WriteEigenvectors = Yes
+#  WriteEigenvectors = Yes
 }
 
 Analysis = {
-  EigenvectorsAsTxt = Yes
+#  EigenvectorsAsTxt = Yes
 }
 
 ParserOptions = {
-  ParserVersion = 4
+  ParserVersion = 14
 }
