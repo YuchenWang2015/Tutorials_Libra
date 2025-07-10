@@ -101,6 +101,7 @@ Tutorials showcasing various capabilities of Libra
     * 6.4.4. [More examples of DVR and dynamics](6_dynamics/4_wavepackets/4_more)
     * 6.4.5. [Grids and hyperplanes](6_dynamics/4_wavepacket/5_grids_and_hyperplanes)
     * 6.5.6. [SOFT dynamics in 1D and 2D with PyTorch](6_dynamics/4_wavepackets/6_soft_with_pytorch)
+    * 6.5.7. [Local Diabatic Representation (LDR) dynamics with PyTorch solver](6_dynamics/4_wavepackets/7_ldr_with_pytorch)
 
  * 6.5. [Quantum Trajectories with Adaptive Gaussians, QTAG](6_dynamics/5_qtag)
     * 6.5.1. [Basics](6_dynamics/5_qtag/1_basics)
@@ -279,8 +280,9 @@ _______________________________
   * [6.1.6.](6_dynamics/1_trajectory_based/6_model_nbra/tutorial.ipynb)
   * [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb)
   * [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
-  * [6.1.10.](6_dynamics/1_trajectory_based/10_model_many_methods)
-  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf)
+  * [6.1.10.](6_dynamics/1_trajectory_based/10_model_many_methods/tutorial.ipynb)
+  * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+  * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
 
 23. Plot diabatic-to-adiabatic transformaitons vs. coordinate in 1D
   * [8.1.](8_model_hamiltonians/1_pes_plotting/tutorial.ipynb)
@@ -397,10 +399,12 @@ _______________________________
   * [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
   * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
   * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
 
 48. Making animated gifs
   * [6.4.3.](6_dynamics/4_wavepackets/3_soft_propagation/tutorial.ipynb)
   * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+  * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
 
 49. Integrating quantum Liouville's equation of motion
   * [2.2.](2_integrators/2_runge_kutta_4_for_Liouville/tutorial.ipynb)
@@ -591,6 +595,9 @@ _______________________________
 99. Numerically exact solution of the TD-SE using PyTorch
   * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
 
+100. LDR solution of the TD-SE using PyTorch
+  * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
+
 ___________________________________________________________
 
 
@@ -704,6 +711,9 @@ ___________________________________________________________
         - `Martens_model` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
         - `gaussian_wavepacket` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
         - `exact_tdse_solver` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+    - `exact_ldr`
+      - `compute`
+        - `ldr_solver` [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
     - `heom`
       - `compute` 
         - `run_dynamics` [6.3.1.](6_dynamics/3_heom/1_dynamics_and_lineshapes/tutorial.ipynb)
@@ -793,6 +803,7 @@ ___________________________________________________________
             [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb) |
             [6.1.10.](6_dynamics/1_trajectory_based/10_model_many_methods/tutorial.ipynb) |
             [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+            [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
       - `Holstein5` [6.5.1.](6_dynamics/5_qtag/1_basics/tutorial.ipynb)
     - `LVC`
     - `Libra`
@@ -809,9 +820,11 @@ ___________________________________________________________
       - `double_arch_geometry` [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb) | [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
     - `Tully`
       - `Tully1` [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
+                 [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
       - `Tully2` [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
+                 [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
       - `Tully3` [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb) |
-                 [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
+                 [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb) | [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
       - `chain_potential` [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
     - `Zhu`
       - `dual_RZD` [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
