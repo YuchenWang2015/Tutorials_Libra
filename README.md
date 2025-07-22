@@ -84,7 +84,7 @@ Tutorials showcasing various capabilities of Libra
     * 6.2.14. [step 4: many recipes](6_dynamics/2_nbra_workflows/14_many_recipes)
     * 6.2.15. [step 4 with BLLZ method](6_dynamics/2_nbra_workflows/15_step4_bllz)
     * 6.2.16. [Kohn-Sham Hamiltonian mapping with machine-learning](6_dynamics/2_nbra_workflows/16_ml_hamiltonian_mapping)
-      *6.2.16.1 [benzene example](6_dynamics/2_nbra_workflows/16_ml_hamiltonian_mapping/1_benzene)
+      * 6.2.16.1. [benzene example](6_dynamics/2_nbra_workflows/16_ml_hamiltonian_mapping/1_benzene)
     * 6.2.17. [Active state selection](6_dynamics/2_nbra_workflows/17_active_space_selection)
     * 6.2.18. [Time-resolved spectra calculations and plotting](6_dynamics/2_nbra_workflows/18_plotting_trpes)
     * 6.2.19. [Running patch dynamics in the RPI approach](6_dynamics/2_nbra_workflows/19_step4_patch_rpi)
@@ -100,8 +100,10 @@ Tutorials showcasing various capabilities of Libra
     * 6.4.3. [SOFT dynamics in 1D and 2D](6_dynamics/4_wavepackets/3_soft_propagation)
     * 6.4.4. [More examples of DVR and dynamics](6_dynamics/4_wavepackets/4_more)
     * 6.4.5. [Grids and hyperplanes](6_dynamics/4_wavepacket/5_grids_and_hyperplanes)
-    * 6.5.6. [SOFT dynamics in 1D and 2D with PyTorch](6_dynamics/4_wavepackets/6_soft_with_pytorch)
-    * 6.5.7. [Local Diabatic Representation (LDR) dynamics with PyTorch solver](6_dynamics/4_wavepackets/7_ldr_with_pytorch)
+    * 6.4.6. [SOFT dynamics with PyTorch](6_dynamics/4_wavepackets/6_soft_with_pytorch)
+      * 6.4.6.1. [Single-state (adiabatic) solver](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state)
+      * 6.4.6.2. [Multiple states (nonadiabatic) solver](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states)
+    * 6.4.7. [Local Diabatic Representation (LDR) dynamics with PyTorch solver](6_dynamics/4_wavepackets/7_ldr_with_pytorch)
 
  * 6.5. [Quantum Trajectories with Adaptive Gaussians, QTAG](6_dynamics/5_qtag)
     * 6.5.1. [Basics](6_dynamics/5_qtag/1_basics)
@@ -364,7 +366,7 @@ _______________________________
 
 41. Plot the PES profiles with multidimensional model Hamiltonians
   * [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb)
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
 
 42. MD and NAMD in the NVT ensemble
   * [6.1.7.](6_dynamics/1_trajectory_based/7_model_nonadiabatic_system_bath/tutorial.ipynb)
@@ -387,7 +389,8 @@ _______________________________
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial4.ipynb)
   * [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
   * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+  * [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
 
 47. DVR calculations
   * [6.4.2.](6_dynamics/4_wavepackets/2_dvr_basics/tutorial.ipynb)
@@ -398,7 +401,8 @@ _______________________________
   * [6.4.4.](6_dynamics/4_wavepackets/4_more/Tutorial4.ipynb)
   * [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
   * [6.1.11.](6_dynamics/1_trajectory_based/11_model_xf/tutorial.ipynb)
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+  * [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
   * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
 
 48. Making animated gifs
@@ -587,13 +591,16 @@ _______________________________
   * [6.2.20.](6_dynamics/2_nbra_workflows/20_step5_sum_rpi/tutorial.ipynb)
 
 97. Save and load the PyTorch tensors to/from file
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+  * [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
 
 98. Potential energy surfaces with PyTorch
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+  * [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
 
 99. Numerically exact solution of the TD-SE using PyTorch
-  * [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+  * [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+  * [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
 
 100. LDR solution of the TD-SE using PyTorch
   * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
@@ -708,9 +715,11 @@ ___________________________________________________________
            [6.1.9.](6_dynamics/1_trajectory_based/9_model_revised/tutorial.ipynb)
     - `exact_torch`
       - `compute`
-        - `Martens_model` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
-        - `gaussian_wavepacket` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
-        - `exact_tdse_solver` [6.4.6.](6_dynamics/4_wavepackets/6_soft_with_pytorch/tutorial.ipynb)
+        - `Martens_model` [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+        - `gaussian_wavepacket` [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+        - `exact_tdse_solver` [6.4.6.1.](6_dynamics/4_wavepackets/6_soft_with_pytorch/1_single_state/tutorial.ipynb)
+        - `exact_tdse_solver_multistate` [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
+        - `tully_potential_matrix` [6.4.6.2.](6_dynamics/4_wavepackets/6_soft_with_pytorch/2_multiple_states/tutorial.ipynb)
     - `exact_ldr`
       - `compute`
         - `ldr_solver` [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
