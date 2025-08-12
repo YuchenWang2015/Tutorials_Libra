@@ -45,7 +45,7 @@ Tutorials showcasing various capabilities of Libra
     * 6.1.10. [Ehrefest, FSSH, GFSH, BCSH, MSSH, DISH, SDM, IDA, MFSD, SSY, etc. with model Hamiltonians](6_dynamics/1_trajectory_based/10_model_many_methods)
     * 6.1.11. [Exact factorization methods with model Hamiltonians](6_dynamics/1_trajectory_based/11_model_xf)
     * 6.1.12. [NA-MD with Spin-boson/FMO Hamiltonians](6_dynamics/1_trajectory_based/12_model_spin_boson_fmo)
-    * * 6.1.13. [NA-MD with Nonadiabatic Dynamics with Shin-Metiu Polaritonic Hamiltonians](6_dynamics/1_trajectory_based/13_polaritonic)
+    * 6.1.13. [NA-MD with Shin-Metiu Polaritonic Hamiltonians](6_dynamics/1_trajectory_based/13_polaritonic)
 
  * 6.2. [Quantum-classical, neglect-of-back-reaction trajectory workflows](6_dynamics/2_nbra_workflows)
     * 6.2.1. [step 1 with DFTB+](6_dynamics/2_nbra_workflows/1_step1_dftb)
