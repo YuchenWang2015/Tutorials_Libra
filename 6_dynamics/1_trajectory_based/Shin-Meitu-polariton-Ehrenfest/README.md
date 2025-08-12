@@ -1,1 +1,0 @@
-This tutorial demonstrates how to run an Ehrenfest dynamics simulation for a simple polaritonic system.
