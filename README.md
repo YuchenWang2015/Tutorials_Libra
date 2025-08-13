@@ -844,8 +844,9 @@ ___________________________________________________________
       - `dual_RZD` [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb) | [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
       - `dual_LZS` [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
       - `Renner_Teller` [8.3.](8_model_hamiltonian/3_models/tutorial.ipynb)
-
-  - `workflows`
+    - `Shin_Metiu`
+      - `polariton` [6.1.13.](6_dynamics/1_trajectory_based/13_polaritonic/tutorial.ipynb)
+  - `workflows` 
     - `nbra`
       - `compute_hprime`
         - `compute_hprime_dia`
