@@ -347,6 +347,7 @@ _______________________________
 38. Read the HDF5 files to setup Hamiltonians
   * [6.1.6.](6_dynamics/1_trajectory_based/6_model_nbra/tutorial.ipynb)
   * [6.1.8.](6_dynamics/1_trajectory_based/8_model_nonadiabatic/tutorial.ipynb)
+  * [6.1.13.](6_dynamics/1_trajectory_based/13_polaritonic/tutorial.ipynb)
   * [6.4.3.](6_dynamics/4_wavepackets/3_soft_propagation/tutorial.ipynb)
 
 39. Read the HDF5 files to plot results of dynamical calculations
@@ -605,6 +606,9 @@ _______________________________
 
 100. LDR solution of the TD-SE using PyTorch
   * [6.4.7.](6_dynamics/4_wavepackets/7_ldr_with_pytorch/tutorial.ipynb)
+
+101. Polaritonic dynamics
+  * [6.1.13.](6_dynamics/1_trajectory_based/13_polaritonic/tutorial.ipynb)
 
 ___________________________________________________________
 
